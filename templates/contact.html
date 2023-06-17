@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+<div class="p-5 mb-4 bg-light rounded-3">
+  <div class="container-fluid py-5">
+    <h1 class="display-5 fw-bold">Contact</h1>
+    <form method="post">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" id="name" class="form-control" required>
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" id="email" class="form-control" required>
+      <label for="reason" class="form-label">Subject</label>
+      <select id="reason" name="name" class="form-control">
+        <option value="animation">Animation</option>
+        <option value="music">Booking</option>
+        <option value="music">Visual Art</option>
+        <option value="something-else">Miscellaneous</option>
+      </select>
+      <label for="message" class="form-label">Message:</label>
+      <textarea id="message" name="message" class="form-control" required></textarea><br>
+      <button type="submit" class="btn btn-primary mb-3">Send</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
